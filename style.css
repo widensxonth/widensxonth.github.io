@@ -1,0 +1,525 @@
+/*=============== Responsive Website Bootcamp Final project ===============*/
+
+* {box-sizing: border-box;}
+
+body {
+   margin:0;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1rem;
+   background-color: #f8e2f7;
+   color: #242424;
+   line-height: 1.6;
+   /* margin: 0 auto; */
+   min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-main {
+    display: grid;
+    grid-template-columns: minmax(1em, 1fr) minmax(0px, 600px) minmax(1em, 1fr);
+}
+
+@media (min-width: 600px) {
+
+    .grid-main {
+        display: grid;
+        grid-template-columns: minmax(1em, 1fr) repeat(3, minmax(180px, 320px)) minmax(1em, 1fr);
+        grid-column-gap: 1em;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-top: 0;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    h3 {
+        font-size: 1 rem;
+    }
+}
+
+/* ============= Header ============== */
+
+.header {
+    margin: 0 auto;
+    padding: 0.5em 0;
+    background-color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;    
+    z-index: 1;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 2/-2; 
+} 
+
+.nav { 
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    transition: transform 450ms ease-in-out;
+    transform: translateX(0);
+    background-color:#5923da; 
+}
+
+.nav-open { 
+    transform: translateX(-100%);
+
+}
+
+.button-open-nav {
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0 0 0 0.5em;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+
+.button-close-nav {
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+    font-size: 2.5rem;
+    font-weight: 700;
+    padding: 0.25em 0.25em;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #db61d5;
+}
+
+.button-close-nav:hover,
+.button-close-nav:focus {
+    color: #972d92;
+}
+
+
+.nav-list {
+    margin:0;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0.25em 0;
+}
+
+.nav-link { 
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 0.35em 1.25em;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+} 
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #ac3fa6 ;
+}
+
+
+.nav-link-current {
+    /* border-bottom: 1px black solid; */
+}
+
+.logo-link {
+    font-size: 0; /* Remove bottom padding from link */
+    margin: 0;
+    align-self: center;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+}
+
+/* procisitit query posle mobilnogo sozdanija */
+
+@media (min-width: 1000px) {
+
+    .header-content {
+        grid-column: 2/-2; 
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    } 
+
+    .button-open-nav,
+    .button-close-nav {
+        display: none;
+    }
+
+    .nav { 
+        transform: translateX(0vw);
+        position: initial;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #FFF;
+
+    }
+    
+    .nav-list {
+        margin:0;
+        display: flex;
+        flex-direction:row;
+        list-style-type: none;
+        padding: 0;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin-left: 1em;
+    }
+    
+    .nav-link { 
+        padding: 0.25em 1.25em;
+        text-align: center;
+        color: #000;
+        font-size: 1rem;
+        font-weight: 700;
+        }     
+    
+}
+
+
+/* ==================
+   Layout
+===================== */
+
+
+/* ==================
+   Typography
+===================== */
+
+h1, h2, strong {
+     font-weight: 700;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1 rem;
+}
+
+a {
+    color: #242424;
+}
+
+p {
+    font-size: 1 rem;
+    line-height: 1.5;
+}
+
+
+/* ==== Section intro ==== */
+
+.section-intro {
+    padding: 2em 0 0;
+    background-color: #fff;
+}
+
+.main-template {
+    margin-top: 3.3em;
+
+}
+
+.section-intro > * {
+    grid-column: 2 / -2;
+}
+
+.page-title {
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+    justify-self: center;
+}
+
+.page-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.page-description + p {
+    margin-top: 0;
+}
+
+
+@media (min-width: 880px) {
+    .main-template {
+           background-color: #f8e2f7; 
+    }
+
+    .section-intro {
+        padding: 4em 0;
+        margin-bottom: 2em;
+    }
+
+    .page-title {
+        grid-column: 2 / 4;
+        font-size: 3.5rem;
+        margin: 0;
+        padding-right: 0.5em;
+    }
+
+    .page-image {
+        /* padding: 0 2em; */
+        grid-column: 4 / -2;
+        grid-row: span 3; 
+        height: 100%; 
+        max-width: 100%;
+    }
+
+    .page-description {
+        grid-column: 2 / 4;
+        padding-right: 2em;
+    }
+
+}
+
+/* ==== Section team ==== */
+
+.section-team-title {
+    margin: 0 0 0.5em;
+    grid-column: 2/ -2;
+}
+
+.section-team-subtitle {
+    margin:0 0 1em ;
+    font-size: 1.2rem;
+    grid-column: 2/ -2;
+}
+
+
+.section-team {
+    padding: 2em 0;
+    background-color: #FFF; 
+}
+
+.team-card {
+    grid-column: 2 / -2;
+    margin-bottom: 1em;
+}
+
+.team-portrait {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.team-name {
+    margin: 0;
+}
+
+.team-role {
+    margin: 0;
+}
+
+.social-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-size: 1.35rem;
+    align-self: center;
+}
+
+.social-list-item {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.social-list-link {
+    margin: 0 0.75em 0 0;
+    color: #b4b4b4;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    color: #242424;
+}
+
+
+
+@media (min-width: 600px) {
+    
+    .section-team {
+        /* border: 2px solid springgreen; */
+        margin-bottom: 2em;
+    }
+
+    .section-team-title {
+        grid-column: 2/ span 1;
+        /* border: 1px solid gold; */
+        align-self: start;
+        margin: 0 0 1em;
+        font-size: 2.5rem;
+    }
+    
+    .section-team-subtitle {
+        grid-column: 3 /-2;
+        /* border: 1px solid gold; */
+        padding: 0 0.5em;
+        margin: 0;
+        font-size: 1.5 rem;
+    }
+
+    .team-card:first-of-type {
+        grid-column: 2 / span 1;
+    }
+
+    .team-card {
+        grid-column: span 1;
+        
+    }
+
+
+    .team-portrait {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;      
+        object-position: center; 
+    }
+}
+
+
+@media (min-width:1000px) {
+    .team-portrait {
+        height: 500px;
+        max-height: 600px;
+        object-position: center; 
+    }
+
+    .team-name {
+        margin-top: 0.25em;
+        font-size: 1.4rem;
+    }
+    
+    .team-role {
+        margin-bottom: 0.5em;
+    }
+
+}
+
+
+/* ================ Footer ================== */
+
+.footer {
+    background-color: #f9f9f9;
+    margin: 0;
+    color: #bbbbbb;
+}
+
+.footer a {
+    color: #bbbbbb;
+}
+
+.footer-content{
+    grid-column: 2/-2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: space-between;
+    padding: 2em 0;
+}
+
+.copyright-container {
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    grid-column: 1/-1;
+    padding: 1em;
+    opacity: 0.8;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.logo-footer {
+    width: 75px;
+    opacity: 0.8;
+}
+
+footer .nav-list {
+    padding: 2em 0;
+    align-items: center;
+    order: 1;
+    flex-basis: 100%;
+}
+
+footer .nav-item {
+    margin: 0.25em;
+}
+
+footer .nav-link{ 
+    color: #242424;
+    opacity: 0.8;
+    font-size: 1rem;
+} 
+
+/* Footer Navigation */
+
+@media (min-width:600px) {
+    footer .nav-list {
+        flex-direction: row;
+        padding: 1em 0;
+        justify-content: space-between;
+        flex-basis: auto;
+        order: 1;
+    }
+    
+    .logo-footer {
+        order: 0;
+    }
+
+    footer .social-list {
+        order: 1;
+    }
+
+    footer .nav-item {
+        margin: 0.25em;
+    }
+
+}
