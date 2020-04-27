@@ -1,2 +1,2 @@
 # widensxonth.github.io
-HTML+CSS exercises
+Building a final project for Responsive Website development Bootcamp
