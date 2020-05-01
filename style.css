@@ -22,6 +22,10 @@ body {
     grid-template-columns: minmax(1em, 1fr) minmax(0px, 600px) minmax(1em, 1fr);
 }
 
+.main-template {
+    margin-top: 4em;
+}
+
 h1, h2, h3, strong {
     font-weight: 700;
 }
@@ -567,41 +571,6 @@ span.current {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section-companies{
     grid-column: 2 /-2;
     /* grid-row-gap: 1em; */
@@ -736,52 +705,6 @@ span.current {
         z-index: 6;
  }
 }
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ================ Footer ================== */
