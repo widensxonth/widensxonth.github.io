@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="../normalize.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+
+    <title>Contact Us / Lorem </title>
+</head>
+
+<body>
+    <header class="header grid-main">
+            <div class="header-content">
+                <a href="../index.html" class="logo-link">
+                    <img src="Images/logo.svg" alt="Logo" class="logo">
+                </a>
+                <button aria-label="Open navigation" class="button-open-nav">&#9776;</button>
+                <nav class="nav">
+                    <button aria-label="Close navigation" class="button-close-nav">&times;</button>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="../about.html" class="nav-link "> About us</a></li>
+                        <li class="nav-item"><a href="..contact.html" class="nav-link nav-link-current"><span class="current">Contact</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+    </header> 
+
+    <main class="main-template container">
+
+        <section class="section-contact grid-main">
+            <h1 class="contact-form-title">Contact us</h1>
+            <img src="/Images/people-laughing.jpg" alt="" class="contact-form-image" />
+
+            <div class="contact-form-container">
+                
+                <form class="contact-form" action="#" method="POST">
+
+                    <label for="fname">First name: <span class="required">*</span></label>
+                    <input type="text" id="fname" placeholder="Name" required>
+
+                    <label for="lname">Last name: </label>
+                    <input type="text" id="lname" placeholder="Surname">
+
+                    <label for="email">Email: <span class="required">*</span></label>
+                    <input type="email" id="email" placeholder="john.smith@gmail.com" required>
+
+                    <label for="message">Message: <span class="required">*</span></label>
+                    <textarea id="message"  placeholder="Message" required></textarea>
+
+                    <input class="button-primary button-send" type="submit" value="Send" />
+                </form>
+                </div>
+
+                
+
+        </section>
+    
+        <section class="section-cta grid-main">
+            <h2 class="section-cta-title">MODERN RESUME TEMPLATES</h3>
+            <p class="section-cta-subtitle">Minimal design. Positive impact.</p>
+            <a href="#" class="button-primary button-cta">Subscribe</a>  
+        </section>
+    
+    </main>
+    <footer class="footer grid-main">
+        <div class="footer-content">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link ">Home</a></li>
+                <li class="nav-item"><a href="../about.html" class="nav-link">About us</a></li>
+                <li class="nav-item"><a href="../contact.html" class="nav-link nav-link-current"><span class="current">Contact</span></a></li>
+            </ul>
+    
+            <div class="logo-container">
+                <a href="../index.html" class="logo-link"><img src="Images/logo.svg" alt="Logo" class="logo-footer"></a>
+                
+                <ul class="social-list">
+                    <li class="social-list-item"><a href="#" class="social-list-link"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="social-list-item"><a href="#" class="social-list-link"><i class="fab fa-twitter"></i></a></li>
+                    <li class="social-list-item"><a href="#" class="social-list-link"><i class="fab fa-facebook-square"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+            <div class="copyright-container" >
+                <p class="copyright">
+                Copyright © 2020 Made with ♥ <br/>
+                <a href="#" >Terms and Conditions</a> | <a href="#" >Privacy Policy </a>
+                </p>
+            </div>
+    </footer>
+
+<script src="../script.js"></script> 
+</body>
+</html>
