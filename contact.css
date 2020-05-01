@@ -1,0 +1,97 @@
+/* ================ Contact ================== */
+
+.section-contact{
+    grid-column: 2 / -2;
+    background-color: #fff;
+    padding: 2em 0 4em;
+}
+
+.section-contact > * {
+    grid-column: 2 / -2;
+}
+
+.contact-form-container {
+    background-color: #fff;
+}
+
+.contact-form {
+    display: grid;
+    padding-top: 1em;
+}
+
+.contact-form > *{
+    grid-column: 2 / -2;
+}
+
+.contact-form-image {
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact-form-title {
+    margin: 0;
+}
+
+input, textarea, select { 
+    font-size: inherit;
+    font-family: 'Roboto', sans-serif;
+    border: 0;
+}
+
+.contact-form label{
+    font-weight: 700;
+}
+
+.contact-form input, textarea {
+    margin-bottom: .75em;
+    padding: .75em;
+}
+
+#fname, #lname, #email, textarea {
+    background-color: #f8e2f7; 
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.button-send {
+    border: 0;
+    justify-self: stretch;
+}
+
+.required {
+    color: rgb(194, 35, 35);
+}
+
+
+@media (min-width: 600px) {
+    .section-contact{
+        padding: 2em 0;
+    }
+
+    .button-send {
+        grid-column: 1 ;
+    }
+
+    .contact-form-container {
+        grid-column: 2 / span 2;
+    }
+    .contact-form {
+        padding-right: 5%;
+    }
+
+    .contact-form-title {
+        margin: 0;
+    }
+
+    .contact-form-image {
+        grid-column: -3 / -2;
+        grid-row: span 2; 
+        align-self: stretch; 
+        object-position: center;
+        padding: 1em 0;
+    }
+}
