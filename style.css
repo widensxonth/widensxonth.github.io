@@ -458,10 +458,14 @@ span.current {
 /* Trigger child hover */
 .section-blog-card:hover .blog-card-featured{
     transform: scale(1.2);
+    backface-visibility: hidden;
 }
 
 .section-blog-card:focus .blog-card-featured{
     transform: scale(1.2);
+    backface-visibility: hidden;
+
+
 }
 
 .section-blog-card:hover .blog-card-title{
